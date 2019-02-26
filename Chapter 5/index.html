@@ -6,7 +6,34 @@
 </head>
 <body>
     <script>
-        
+// THIS IS THE CODE FROM THE BOOK
+// function repeat(n, action) {
+//  for (let i = 0; i < n; i++) {
+//    action(i);
+//  }
+// }
+
+// repeat(3, console.log);
+// → 0
+// → 1
+// → 2
+
+
+// THIS IS WHAT I CHANGED IT TO
+function promptForData(isYes, prompt) {
+  let data = [];
+  for(let i = 0; isYes; i++) {
+    data[i] = prompt("Enter a value");
+    isYes = false;
+  }
+  console.log(data);
+}
+
+let response = window.prompt("Would you like to enter a value? (y/n)");
+while(response == 'y') {
+	promptForData(true, window.prompt);
+    response = window.prompt("Would you like to enter a value? (y/n)");
+}
     </script>
 </body>
 </html>
